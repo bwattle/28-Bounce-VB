@@ -22,6 +22,7 @@ Partial Class frmBounce
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -31,6 +32,7 @@ Partial Class frmBounce
         Me.ColourToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.panelMain = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -95,6 +97,9 @@ Partial Class frmBounce
         Me.panelMain.Size = New System.Drawing.Size(640, 480)
         Me.panelMain.TabIndex = 8
         '
+        'Timer1
+        '
+        '
         'frmBounce
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -122,4 +127,6 @@ Partial Class frmBounce
     Friend WithEvents ColourToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents panelMain As Panel
+    Friend WithEvents Timer1 As Timer
+    'Friend WithEvents shpBall As Rectangle
 End Class
