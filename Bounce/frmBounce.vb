@@ -70,33 +70,33 @@
         'Move back to edge and reverse X direction
         If Xpos > Me.Width - shpBall.Width Then
             Xpos = Me.Width - shpBall.Width
-            XDirection = XDirection * -1
+            XDirection *= -1
         End If
 
         'The ball has reached the LHS of screen
         'Move back to edge and reverse X direction
         If Xpos < 0 Then
             Xpos = 0
-            XDirection = XDirection * -1
+            XDirection *= -1
         End If
 
         'The ball has reached the bottom of screen
         'Move back to edge and reverse y direction
         If Ypos > Me.Height - shpBall.Width Then
             Ypos = Me.Height - shpBall.Width
-            YDirection = YDirection * -1
+            YDirection *= -1
         End If
 
         'The ball has reached the top of screen
         'Move back to edge and reverse Y direction
         If Ypos < 0 Then
             Ypos = 0
-            YDirection = YDirection * -1
+            YDirection *= -1
         End If
 
         'Increment or decrement X and Y values
-        Xpos = Xpos + (XDirection * speed)
-        Ypos = Ypos + (YDirection * speed)
+        Xpos += (XDirection * speed)
+        Ypos += (YDirection * speed)
 
         'Actually move the ball
         shpBall.X = Xpos
