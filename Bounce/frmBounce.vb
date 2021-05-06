@@ -1,7 +1,7 @@
 ﻿Public Class frmBounce
-    Dim g As Graphics
+    Dim g As Graphics       'create a graphics opject to display 
     Dim shpStage As New Rectangle(0, 0, 640, 480)  'stage rectangle position & dimensions
-    Dim shpBall As New Rectangle(50, 20, 90, 90)   'ball circle position & dimensions
+    Dim shpBall As New Rectangle(50, 20, 90, 90)   'ball pos'n & dimensions - in 'RepaintBounce', we call the "FillElipse" class to create the circle
     Dim myBallBrush As Brush
     Dim myBGBrush As Brush
     Dim speed As Int16
@@ -49,6 +49,11 @@
         g.FillEllipse(myBallBrush, shpBall)  'paint the ball
     End Sub
 
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        MoveBall() 'run the "MoveBall" function on each tick of the clock
+        'used https://www.wikihow.com/Add-a-Timer-in-Visual-Basic
+    End Sub
+
     Private Sub MoveBall()
         'Bounce shpBall around frmBounce
         'Requires Speed, XDirection, YDirection at form level
@@ -64,7 +69,7 @@
 
         'Get current ball position
         Xpos = shpBall.Left ' X changed to Xpos because in this version of VB, 
-        Ypos = shpBall.Top  '"X" & "Y" are used to SET position
+        Ypos = shpBall.Top  '   "X" & "Y" are used to SET position
 
         'The ball has reached the RHS of screen
         'Move back to edge and reverse X direction
@@ -103,13 +108,4 @@
         shpBall.Y = Ypos
         RepaintBounce()
     End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        MoveBall() 'run the "MoveBall" function on each tick of the clock
-        'used https://www.wikihow.com/Add-a-Timer-in-Visual-Basic
-    End Sub
-
-    'Private Sub shpBall_Click(sender As Object, e As EventArgs) Handles shpBall.Click
-    'MsgBox("Ouch, Got me!", MsgBoxStyle.Information + MsgBoxStyle.ApplicationModal)
-    'End Sub
 End Class

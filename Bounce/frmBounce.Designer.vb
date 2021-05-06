@@ -110,7 +110,7 @@ Partial Class frmBounce
         Me.Controls.Add(Me.MenuStrip2)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmBounce"
-        Me.Text = "v2.03 Ball Bounce"
+        Me.Text = "v2.04 Ball Bounce"
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
