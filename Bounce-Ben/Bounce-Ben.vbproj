@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EB9603D5-79DA-433C-B541-E3B31DBB3675}</ProjectGuid>
+    <ProjectGuid>{862B089B-C791-45A8-8357-AEF26872CC28}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>Bounce.My.MyApplication</StartupObject>
     <RootNamespace>Bounce</RootNamespace>

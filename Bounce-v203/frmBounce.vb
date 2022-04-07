@@ -77,7 +77,7 @@
 
         'The ball has reached the bottom of screen
         'Move back to edge and reverse y direction
-        If Ypos > Me.Height - 400 - shpBall.Width Then
+        If Ypos > Me.Height - 150 - shpBall.Width Then
             'If Ypos > Me.Height - 83 - shpBall.Width Then
             Ypos = Me.Height - 100 - shpBall.Width
             YDirection *= -1
